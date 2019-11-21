@@ -1,0 +1,1 @@
+stinger8-child
