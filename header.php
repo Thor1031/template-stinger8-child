@@ -33,16 +33,26 @@
 	</head>
 
 	<body <?php body_class(); ?> >
+	<!-- facebookボタンのSDK -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.9";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- /facebookボタンのSDK　ここまで -->
 
 			<div id="st-ami">
 				<div id="wrapper">
 				<div id="wrapper-in">
 					<header>
-						<!-- /ヘッダー1行目 -->
+						<!-- ヘッド部分 -->
 						<div id="headbox-bg">
 							<div class="clearfix" id="headbox">
 								<?php get_template_part( 'st-accordion-menu' ); //アコーディオンメニュー ?>
-									<div id="header-l">
+								<div id="header-l">
 									<!-- ロゴ又はブログ名 -->
 									<p class="sitename">
 										<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -60,24 +70,24 @@
 											<?php bloginfo( 'description' ); ?>
 										</p>
 									<?php } ?>
-									</div><!-- /#header-l -->
-
+								</div><!-- /#header-l -->
 							</div><!-- /#headbox-bg -->
 						</div><!-- /#headbox clearfix -->
+						<!-- /ヘッド部分　ここまで -->
 
+						<!-- ヘッダー部分 -->
 						<div id="gazou-wide">
 							<?php get_template_part( 'st-header-menu' ); //カスタムヘッダーメニュー ?>
 
-							<?php if ( (get_header_image()) && (is_front_page()) ) : //カスタムヘッダー ?>
-							<div id="st-headerbox">
-								<div id="st-header">
-									<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+							<?php if ( (get_header_image()) && (is_front_page()) ) : //カスタムヘッダー画像 ?>
+								<div id="st-headerbox">
+									<div id="st-header">
+										<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+									</div>
 								</div>
-							</div>
 							<?php endif;?>
-
 						</div>
-						<!-- /gazou -->
+						<!-- /ヘッダー部分　ここまで-->
 
 					</header>
 					<div id="content-w">
