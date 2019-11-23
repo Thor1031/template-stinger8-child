@@ -418,10 +418,6 @@ select:focus {
 	width: 820px;
 }
 
-.colortxt {
-	color: #000;
-}
-
 .drawer {
 	display: none;
 	position: fixed;
@@ -748,6 +744,18 @@ button.toTop i.fa-chevron-up {
 	width: 100%;
 }
 
+.youtube-official a {
+	background-color: #ff0000;
+}
+
+.twitter-official a {
+	background-color: #55acee;
+}
+
+.facebook-official a {
+	background-color: #3b5998;
+}
+
 .brsp {
 	display: none;
 }
@@ -795,6 +803,32 @@ button.toTop i.fa-chevron-up {
 
 #content-w {
 	position: relative;
+}
+
+#footer {
+	background-color: #fff;
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+#footer-menucontainer {
+	-webkit-box-align: stretch;
+	-webkit-box-pack: start;
+	align-items: stretch;
+	display: -webkit-box;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#footer-menucontainer ul.footermenust li {
+	border-right: none;
+	display: block;
+	margin-bottom: 10px;
+	padding-left: 0;
+}
+
+.footerlogo a img {
+	width: 130px;
 }
 
 .gfooter-contents {
@@ -853,17 +887,11 @@ button.toTop i.fa-chevron-up {
 	font-size: inherit;
 }
 
-#headbox-bg {
-	display: none;
-}
-
 #st-menubox {
 	background-color: #fff;
 	border: none;
-	position: fixed;
-	top: 0;
+	margin-bottom: 10px;
 	width: 100%;
-	z-index: 20;
 }
 
 #st-menubox #st-menuwide {
@@ -872,7 +900,7 @@ button.toTop i.fa-chevron-up {
 	align-items: center;
 	display: -webkit-box;
 	display: flex;
-	height: 80px;
+	height: 70px;
 	justify-content: flex-start;
 }
 
@@ -881,15 +909,15 @@ button.toTop i.fa-chevron-up {
 }
 
 #st-menubox #st-headerlogo img {
-	width: 200px;
+	width: 130px;
 }
 
-#st-menubox nav {
+#st-menubox nav.smanone {
 	margin: 0;
 	width: 750px;
 }
 
-#st-menubox nav ul {
+#st-menubox nav.smanone ul {
 	-webkit-box-align: center;
 	-webkit-box-pack: space-evenly;
 	align-items: center;
@@ -898,12 +926,8 @@ button.toTop i.fa-chevron-up {
 	justify-content: space-evenly;
 }
 
-#st-menubox nav li {
+#st-menubox nav.smanone li {
 	border: none;
-}
-
-#st-headerbox {
-	display: none;
 }
 
 .gheader {
@@ -922,7 +946,7 @@ button.toTop i.fa-chevron-up {
 	align-items: center;
 	display: -webkit-box;
 	display: flex;
-	height: 80px;
+	height: 70px;
 	justify-content: flex-start;
 	min-width: 1286px;
 	padding: 0 16px;
@@ -945,7 +969,7 @@ button.toTop i.fa-chevron-up {
 }
 
 .header-logo a img {
-	width: 200px;
+	width: 130px;
 }
 
 .header-nav {
@@ -995,7 +1019,7 @@ button.header-btn {
 
 .mv {
 	height: 500px;
-	margin-top: 80px;
+	margin-top: 70px;
 	padding-bottom: 40px;
 	padding-top: 40px;
 }

@@ -1,0 +1,47 @@
+@mixin fsize(
+
+	$size: null,
+	$size_custom: 14px,
+	$down_size_custom: 2px,
+
+	) {
+
+	@if ($size_str == 'xs') {
+		$size: 14px;
+		$down_size: 2px;
+		letter-spacing: 0;
+	}
+	@else if ($size_str == 's') {
+		$size: 16px;
+		$down_size: 2px;
+	}
+	@else if ($size_str == 'm') {
+		$size: 20px;
+		$down_size: 2px;
+	}
+	@else if ($size_str == 'l') {
+		$size: 28px;
+		$down_size: 4px;
+	}
+	@else {
+		$size: $size_custom;
+		$down_size: $down_size_custom
+	}
+
+	font: {
+		size: $size;
+	}
+
+	@include mq('tab') {
+		$size: $size - $down_size;
+    font: {
+      size: $size;
+    }
+  }
+  @include mq('sp') {
+		$size: $size - $down_size;
+    font: {
+      size: $size;
+    }
+  }
+}

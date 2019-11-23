@@ -1,29 +1,39 @@
 
 $bc-header: #fff;
 $bc-header-btn: #da6b64;
-$width-logo: 200px;
+$width-logo: 130px;
 $width-nav: 70%;
+$header_is_fixed: false; // falseでヘッダー非固定表示
 
-// ヘッダー１列目
+// ヘッド コンテナ
 #headbox-bg {
-	display: none;
+	// display: none;
 }
 
-// ヘッダーメニューボックス
+// ヘッダー コンテナ
+#gazou-wide {
+
+}
+
+// ヘッダーメニュー　コンテナ
 #st-menubox {
-	position: fixed;
-	top: 0;
+	@if ($header_is_fixed) {
+		position: fixed;
+		top: 0;
+		z-index: map-get($layer, "header");
+	}
 	width: 100%;
-	z-index: map-get($layer, "header");
 	border: none;
 	background-color: $bc-header;
+	margin-bottom: 10px;
 
-	// inner
+	// ヘッダーメニュー　inner
 	#st-menuwide {
 		@include flex-container(flex-start);
 		height: $header-height;
 	}
 
+	// ヘッダーロゴ
 	#st-headerlogo {
 		margin-right: auto;
 
@@ -32,7 +42,8 @@ $width-nav: 70%;
 		}
 	}
 
-	nav {
+	// ヘッダーメニュー
+	nav.smanone {
 		width: 750px;
 		margin: 0;
 
@@ -42,13 +53,19 @@ $width-nav: 70%;
 
 		li {
 			border: none;
+
+			a {
+
+			}
 		}
 	}
 }
 
+// カスタムヘッダー画像　コンテナ
 #st-headerbox {
-	display: none;
+	// display: none;
 }
+
 
 .gheader {
 	position: fixed;

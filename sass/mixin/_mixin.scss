@@ -29,17 +29,18 @@
 	@return $size / $size2;
 }
 
-// fontawesome 適用　
+// fontawesome　
 @mixin f-awesome($content) {
 	content: $content;
 	font-family: $ff-awesome;
 	font-weight: 900;
 }
 
-@mixin flex-container($jc: space-around, $col-bp: null) {
+// flex container
+@mixin flex-container($jc: space-around, $ai: center, $col-bp: null) {
 	display: flex;
 	justify-content: $jc;
-	align-items: center;
+	align-items: $ai;
 
 	@if $col-bp != null {
 		@include mq($col-bp) {
@@ -48,6 +49,7 @@
 	}
 }
 
+// container's basic setting
 @mixin basebox($height: null, $pt: 40px, $pb: 40px, $pt_sp: $pt, $pb_sp: $pb) {
 	padding: {
 		top: $pt;

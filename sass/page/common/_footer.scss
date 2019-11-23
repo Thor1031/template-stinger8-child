@@ -1,4 +1,5 @@
 
+$footer-bc: #fff;
 $footer-cnt-bc: #4F4C4D;
 $footer-cnt-c: #fff;
 $footer-cnt-pd: 48px;
@@ -6,6 +7,65 @@ $footer-btm-bc: #fff;
 $footer-btm-c: #fff;
 $copy-c: #969696;
 $footer-btm-pd: 32px;
+$width-footerlogo: 130px;
+
+#footer {
+	@include basebox();
+	background-color: $footer-bc;
+
+	// フッター inner
+	&-in {
+
+	}
+
+	// フッターメニュー　コンテナ
+	&-menucontainer  {
+		@include flex-container(
+			$jc: flex-start,
+			$ai: stretch
+		);
+
+		dl {
+
+		}
+
+		dt {
+
+		}
+
+		// フッターメニュー ボックス
+		ul.footermenust {
+
+			li {
+				display: block; // メニューを縦に並べる
+				border-right: none;
+				padding: {
+					left: 0;
+				};
+				margin: {
+					bottom: 10px;
+				}
+
+			}
+
+		}
+	}
+
+	&-bottomcontainer {
+
+	}
+}
+
+.footerlogo {
+
+	a {
+
+		img {
+			width: $width-footerlogo;
+		}
+	}
+}
+
 
 .gfooter {
 
