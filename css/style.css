@@ -805,6 +805,71 @@ button.toTop i.fa-chevron-up {
 	position: relative;
 }
 
+.p-navibox {
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	align-items: center;
+	background-color: #f8f8f8;
+	display: -webkit-box;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 25px;
+}
+
+.p-navibox .fa-chevron-left,
+.p-navibox .fa-chevron-right {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.p-navibox .p-navi-prev {
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+	align-items: center;
+	border-right: 1px solid #000;
+	display: -webkit-box;
+	display: flex;
+	justify-content: flex-start;
+	width: 50%;
+}
+
+.p-navibox .p-navi-prev dd {
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+.p-navibox .p-navi-next {
+	-webkit-box-align: center;
+	-webkit-box-direction: reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: end;
+	align-items: center;
+	display: -webkit-box;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	width: 50%;
+}
+
+.p-navibox .p-navi-next dd {
+	margin: 0 auto;
+	padding: 0 25px;
+}
+
+.p-navibox dd {
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: initial;
+}
+
+.p-navibox a {
+	text-decoration: none;
+}
+
 #footer {
 	background-color: #fff;
 	padding-bottom: 40px;

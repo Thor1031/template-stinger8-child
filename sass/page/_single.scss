@@ -1,0 +1,49 @@
+.p-navibox {
+	@include flex-container(center);
+	background-color: #f8f8f8;
+	padding: {
+		top: 25px;
+		bottom: 25px;
+		left: 10px;
+		right: 10px;
+	};
+
+	.fa-chevron-left, .fa-chevron-right {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.p-navi-prev {
+		width: 50%;
+		@include flex-container(flex-start);
+		border-right: 1px solid #000;
+
+		dd {
+			padding: 0 25px;
+			margin: 0 auto;
+		}
+	}
+
+	.p-navi-next {
+		width: 50%;
+		@include flex-container(flex-end);
+		flex-direction: row-reverse;
+
+
+		dd {
+			padding: 0 25px;
+			margin: 0 auto;
+		}
+	}
+
+	dd {
+		font-size: 14px;
+		letter-spacing: normal;
+		font-weight: normal;
+		line-height: initial;
+
+	}
+	a {
+		text-decoration: none;
+	}
+}
